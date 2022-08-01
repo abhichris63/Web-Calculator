@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+
+    <style>
+        body{
+            padding: 10px;
+            margin: 5px;
+        }
+
+        table {
+            border-radius: 10%;
+            border: 20px solid orange;
+            background-color: black;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        table tr td{
+            padding: 10px;
+            height: 50px;
+        }
+
+        input[id="ac1"]{
+            background-color: lightgrey;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        input[id="mod"]{
+            background-color: lightgrey;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        input[id="divi"]{
+            background-color: orange;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="mul"]{
+            background-color: orange;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
+        input[id="sub"]{
+            background-color: orange;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
+        input[id="add"]{
+            background-color: orange;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
+        input[id="equal"]{
+            background-color: orange;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num7"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num8"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num9"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num4"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num5"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num6"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num1"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num2"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num3"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        input[id="num0"]{
+            background-color: grey;
+            color: white;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        input[id="dot"]{
+            background-color: grey;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        input[id="result1"]{
+            border-radius: 20px;
+            width: 100%;
+            font-size: 30px;
+            color: black;
+            height: 100%;
+        }
+
+        
+        input[type="button"]{
+            border-radius: 20px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>WEB CALCULATOR</h1>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="result1"/></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><input type="button" id="ac1" value="AC" onclick="clr1()"/></td>
+            <td><input type="button" value="%" id="mod" onclick="view1('%')"/></td>
+            <td><input type="button" value="/" id="divi" onclick="view1('/')"/></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td><input type="button" value="7" id="num7" onclick="view1('7')"/></td>
+            <td><input type="button" value="8" id="num8" onclick="view1('8')"/></td>
+            <td><input type="button" value="9" id="num9" onclick="view1('9')"/></td>
+            <td><input type="button" value="*" id="mul" onclick="view1('*')"/></td>
+        </tr>
+        <tr></tr>
+
+        <tr>
+            <td><input type="button" value="4" id="num4" onclick="view1('4')"/></td>
+            <td><input type="button" value="5" id="num5" onclick="view1('5')"/></td>
+            <td><input type="button" value="6" id="num6" onclick="view1('6')"/></td>
+            <td><input type="button" value="-" id="sub" onclick="view1('-')"/></td>
+        </tr>
+        <tr></tr>
+
+        <tr>
+            <td><input type="button" value="1" id="num1" onclick="view1('1')"/></td>
+            <td><input type="button" value="2" id="num2" onclick="view1('2')"/></td>
+            <td><input type="button" value="3" id="num3" onclick="view1('3')"/></td>
+            <td><input type="button" value="+" id="add" onclick="view1('+')"/></td>
+        </tr>
+        <tr></tr>
+
+        <tr>
+            <td colspan="2"><input type="button" id="num0" value="0" onclick="view1('0')"/></td>
+            <td><input type="button" value="." id="dot" onclick="view('.')"/></td>
+            <td><input type="button" value="=" id="equal" onclick="compute1()"/></td>
+        </tr>
+    </table>
+    </center>
+
+    <script>
+        function view1(num1)
+        {
+            document.getElementById("result1").value+=num1;
+        }
+
+        function compute1()
+        {
+            let x  = document.getElementById("result1").value;
+            let y = eval(x)
+            document.getElementById("result1").value = y;
+        }
+        
+    
+        function clr1()
+        {
+            document.getElementById("result1").value="";
+        }
+    </script>
+
+</body>
+</html>
